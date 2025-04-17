@@ -7,14 +7,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Homepage</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          @guest
+          <li>
+            <a class="nav-link" href="{{route('register')}}">Registrati</a>    
+          </li>
+          <li>
+            <a class="nav-link" href="{{route('login')}}">Accedi</a>
+          </li>
+          @endguest
         </li>
+        @auth
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Benvenuto <a href="{{Auth::user()->name}}"></a>
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
@@ -23,6 +31,7 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
+        @endauth
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
