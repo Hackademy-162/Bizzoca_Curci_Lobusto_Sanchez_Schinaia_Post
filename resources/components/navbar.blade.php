@@ -25,10 +25,11 @@
             Benvenuto <a href="{{Auth::user()->name}}"></a>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+            <form action="{{route('logout')}}" method="POST" id="logout-form" class="d-none">
+              @csrf
+            </form>
+            
           </ul>
         </li>
         @endauth
