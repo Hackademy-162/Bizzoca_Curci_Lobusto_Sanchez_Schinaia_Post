@@ -9,7 +9,7 @@ class ArticleController extends Controller
 {
     public function homepage()
     {
-        return view('homepage');
+        return view('welcome');
     }
 
     
