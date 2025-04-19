@@ -6,7 +6,7 @@
           </div>
       </div>
   </div>
-  <div class="container my-5">
+  <div class="container my-5 vh-100">
       <div class="row justify-content-center">
           <div class="col-12 col-md-8">
               <form method="POST" action="{{route('login')}}" class="card pt-5 shadow">
