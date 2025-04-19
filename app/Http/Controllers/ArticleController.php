@@ -6,8 +6,12 @@ use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ArticleController;
+use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Routing\Controllers\HasMiddleware;
 
-class ArticleController extends Controller
+class ArticleController extends Controller implements HasMiddleware
+
+
 {
     public function homepage()
     {
@@ -41,5 +45,13 @@ class ArticleController extends Controller
     
         return redirect(route('homepage'))->with('message', 'Articolo creato con successo');
     }
+
+    public static function middleware()
+    {
+        return [new Middleware ('auth', except: ['index', 'show']),
+    ];
+    
+    }
+
     
 }
