@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg nav-scrolled transition fixed-top bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -11,35 +11,33 @@
         </li>
         <li class="nav-item">
           @guest
-          <li>
-            <a class="nav-link" href="{{route('register')}}">Registrati</a>    
-          </li>
-          <li>
-            <a class="nav-link" href="{{route('login')}}">Accedi</a>
-          </li>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="nav-link" href="{{route('register')}}">Registrati</a>    
+            </li>
+            <li>
+              <a class="nav-link" href="{{route('login')}}">Accedi</a>
+            </li>
+          </ul>
           @endguest
         </li>
         @auth
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Benvenuto <a href="{{Auth::user()->name}}"></a>
+            Benvenuto, {{Auth::user()->name}}
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
-            <form action="{{route('logout')}}" method="POST" id="logout-form" class="d-none">
-              @csrf
-            </form>
-            
+            <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('logout-form').submit();">Logout</a>
+            </li>
+            <form action="{{route('logout')}}" method="POST" id="logout-form" class="d-none"></form>
+            @csrf
           </ul>
         </li>
         <li class="nav-item">
-
-          <a class="nav-link" href="{{route('article.create')}}">Inserisci un articolo</a>
-          
+          <a class="nav-link" href="{{route('article.create')}}">Crea tu un articolo</a>
         </li>
         @endauth
       </ul>
-      
     </div>
   </div>
 </nav>
