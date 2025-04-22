@@ -2,11 +2,10 @@
     <div class="container-fluid p-5 bg-secondary-subtle text-center">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class="display-1">Inserisci un articolo</h1>
+                <h1 class="display-1 titolo">Inserisci un articolo</h1>
             </div>
         </div>
     </div>
-    
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
@@ -19,7 +18,6 @@
                         <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
-                    
                     <div class="mb-3">
                         <label for="subtitle" class="form-label">Sottotitolo</label>
                         <input type="text" name="subtitle" class="form-control" id="subtitle" value="{{old('subtitle')}}">
@@ -65,3 +63,4 @@
         </div>
     </div>
 </x-layout>
+
