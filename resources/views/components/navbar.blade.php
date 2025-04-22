@@ -10,6 +10,7 @@
           <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Homepage</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link active" aria-current="page"   href="{{route('article.index')}}">Tutti gli articoli</a>
           @guest
           <ul class="dropdown-menu">
             <li>
