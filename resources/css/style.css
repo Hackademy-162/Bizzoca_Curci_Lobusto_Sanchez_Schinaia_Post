@@ -39,7 +39,7 @@
     
     
     .nav-scrolled{
-        backdrop-filter: blur (8px);
+        backdrop-filter: blur (7px);
         border: 2px solid var(--color-s);
         border-radius: 4px;
         margin: 5vh 15vw; 

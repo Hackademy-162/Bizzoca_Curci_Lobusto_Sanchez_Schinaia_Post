@@ -15,7 +15,8 @@ class ArticleController extends Controller implements HasMiddleware
 {
     public function homepage()
     {
-        return view('welcome');
+        $articles = Article::orderBy('created_at', 'desc')->take(4)->get();
+        return view('welcome', compact('articles'));
     }
 
     public function create()
