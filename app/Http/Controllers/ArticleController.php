@@ -59,10 +59,9 @@ class ArticleController extends Controller implements HasMiddleware
     }
 
     public function index()
-    {   
-        $articles = Article::orderBy('created_at', 'desc')->get();
+    {
+        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->get();
         return view('article.index', compact('articles'));
-
     }
 
     public function show(Article $article)
@@ -70,17 +69,16 @@ class ArticleController extends Controller implements HasMiddleware
         return view('article.show', compact('article'));
     }
 
-    public function byCategory(Category $category)
-    {
-        $articles = $category->articles()->orderBy('created_at', 'desc')->get();
+    public function byCategory(Category $category){
+        $articles = $category->articles()->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
         return view('article.by-category', compact('category', 'articles'));
     }
 
-    public function byUser(User $user)
-    {
-        $articles = $user->articles()->orderBy('created_at', 'desc')->get();
+    public function byUser(User $user){
+        $articles = $user->articles()->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
         return view('article.by-user', compact('user', 'articles'));
-    }
+    } 
+    
 
     
 }
