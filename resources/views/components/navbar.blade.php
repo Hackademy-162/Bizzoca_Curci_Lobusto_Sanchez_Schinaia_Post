@@ -9,6 +9,9 @@
         @guest
           <a class="nav-link" href="{{ route('register') }}">Registrati</a>
           <a class="nav-link" href="{{ route('login') }}">Accedi</a>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ route('careers') }}">Lavora con noi</a>
+          </li>
         @endguest
         @auth
           <span class="nav-link active">Benvenuto, {{ Auth::user()->name }}</span>
