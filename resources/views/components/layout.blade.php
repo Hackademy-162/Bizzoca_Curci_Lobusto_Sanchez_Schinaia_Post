@@ -12,7 +12,8 @@
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+
+<body  class="sfondo">
     <x-navbar/>
     {{$slot}}
     <x-footer/>
