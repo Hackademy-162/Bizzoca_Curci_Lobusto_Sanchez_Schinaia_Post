@@ -10,6 +10,11 @@
   color: rgba(243, 253, 45, 1);
 }
 
+#scroll-text{
+  overflow-y: scroll;
+  height: 481px;
+}
+
 .nome-sito {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -48,8 +53,13 @@
 }
 
 .wrapper{
+  min-height: 100vh;
   background: #000000;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.98) 0%, rgba(243, 253, 45, 1) 31%); 
+}
+
+.bg-transparent{
+  background-color: transparent;
 }
 
 

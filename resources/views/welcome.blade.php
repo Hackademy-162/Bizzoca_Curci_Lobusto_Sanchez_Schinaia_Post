@@ -27,9 +27,13 @@
     <div class="container my-5">
         <div class="row justify-content-evenly">
             @foreach ($articles as $article)
-            <div class="col-12 col-md-4 mt-5">
+            <div class="col-12 col-md-4 mt-5 d-flex justify-content-center">
                 <div class="card border-dark" style="width: 18rem;">
-                    <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="Immagine dell'articolo: {{$article->title}}">
+                    @if ($article->image)
+                    <img src="{{ Storage::url($article->image) }}" class="card-img-top" alt="Immagine dell'articolo: {{$article->title}}">
+                    @else
+                    <img src="https://via.placeholder.com/300x200?text=Nessuna+immagine" class="card-img-top" alt="Immagine mancante per l'articolo: {{$article->title}}">
+                    @endif
                     <div class="card-body">
                         <h5 class="card-title text-dark active">{{$article->title}}</h5>
                         <p class="card-text text-dark active">{{$article->subtitle}}</p>

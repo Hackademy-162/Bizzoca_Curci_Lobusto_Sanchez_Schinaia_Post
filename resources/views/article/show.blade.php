@@ -26,12 +26,12 @@
                 </div>
                 
                 
-                <div class="testo-y active my-3 bg-dark shadow">
+                <div class="testo-y active p-1 my-3 bg-dark shadow" id="scroll-text">
                 <p class=" testo testo-y active">Corpo dell'articolo: <br>{{$article->body}}</p>
                 </div>
             </div>
            
-            <div class="col-12 mt-5">
+            <div class="col-12 mt-4">
                 @if (Auth::user() && Auth::user()->is_revisor)
                 <div class="container ">
                     <div class="row">
