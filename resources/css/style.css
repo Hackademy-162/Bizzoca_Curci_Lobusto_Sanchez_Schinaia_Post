@@ -1,9 +1,13 @@
 .titolo {
   font-family: "Oswald", sans-serif;
-  font-weight: 700; 
+  font-weight: 600; 
   font-style: normal;
   font-optical-sizing: auto;
   
+}
+
+.testo-y{
+  color: rgba(243, 253, 45, 1);
 }
 
 .nome-sito {
@@ -13,6 +17,14 @@
   font-style: normal;
   color: dark;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px  1px 0 black, 1px  1px 0 black;
+}
+
+.shadow-c{
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px  1px 0 black, 1px  1px 0 black;
+}
+
+.bg-white{
+  background-color: white;
 }
 
 
