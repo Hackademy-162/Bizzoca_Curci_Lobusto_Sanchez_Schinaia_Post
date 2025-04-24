@@ -28,7 +28,7 @@
         <li><a class="dropdown-item text-dark pt-2 titolo" href="{{ route('admin.dashboard') }}">Dashboard Admin</a></li>
         @endif
         @if (Auth::user()->is_revisor)
-        <li><a class="dropdown-item text-dark pt-2" href="{{ route('revisor.dashboard') }}">Dashboard Revisor</a></li>
+        <li><a class="dropdown-item text-dark pt-2 titolo" href="{{ route('revisor.dashboard') }}">Dashboard Revisor</a></li>
         @endif
         @endauth
       </div>

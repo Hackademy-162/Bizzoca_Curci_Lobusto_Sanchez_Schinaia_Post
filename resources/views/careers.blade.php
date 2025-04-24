@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-secondary-subtle text-center">
+    <div class="container-fluid p-5  text-center">
       <div class="row justify-content-center">
         <div class="col-12">
-          <h1 class="display-1">Lavora con noi</h1>
+          <h1 class="display-1 nome-sito">Lavora con noi</h1>
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@
             </div>
   
             <div class="mt-3 d-flex justify-content-center">
-  <button type="submit" class="btn btn-outline-secondary">Invia candidatura</button>
+  <button type="submit" class="btn btn-outline-dark">Invia candidatura</button>
             </div>
           </form>
         </div>

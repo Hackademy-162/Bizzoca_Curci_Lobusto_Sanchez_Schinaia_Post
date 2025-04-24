@@ -13,10 +13,12 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body  class="sfondo">
+<body>
+  <div class="wrapper">
     <x-navbar/>
     {{$slot}}
     <x-footer/>
+  </div>
 
    
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
