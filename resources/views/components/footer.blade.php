@@ -7,9 +7,9 @@
       <div class="row">
         <!--Grid column-->
         <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase text-white">The Aulab Post</h5>
+          <h5 class="text-uppercase text-center text-white">The Aulab Post</h5>
           
-          <p class="text-white">
+          <p class="text-white text-center">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
             molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
             aliquam voluptatem veniam, est atque cumque eum delectus sint!
@@ -47,9 +47,9 @@
         
         <!--Grid column-->
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-0 text-white">I NOSTRI CONTATTI</h5>
+          <h5 class="text-uppercase mb-0 text-center text-white">I NOSTRI CONTATTI</h5>
           
-          <ul class="list-unstyled pt-3">
+          <ul class="list-unstyled pt-3 text-center">
             <li>
               <a href="#!" class="text-white text-decoration-none">P.IVA n. 12345678</a>
             </li>

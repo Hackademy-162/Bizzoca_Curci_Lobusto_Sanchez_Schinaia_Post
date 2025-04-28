@@ -17,9 +17,18 @@
             <div class="col-12 col-md-6 ">
                 <div class="text-center bg-dark shadow">
                     <h2 class="testo testo-y ">{{$article->subtitle}}</h2>
-                    <p class="fs-5 testo testo-y">Categoria:
+                    <p class="fs-5 testo testo-y">Categoria: 
                         <a href="{{route('article.byCategory', $article->category)}}" class="text-capitalize fw-bold testo-y active">{{$article->category->name}}</a>
                     </p>
+                    @if ($article->category)
+                    <p class="fs-5">Categoria:
+                        <a href="{{ route('article.byCategory', $article->category) }}" class="text-capitalize fw-bold text-muted">
+                            {{ $article->category->name }}
+                        </a>
+                    </p>
+                    @else
+                    <p class="fs-5">Nessuna categoria</p>
+                    @endif
                 </div>
                 <div class="testo-y active my-3 bg-dark shadow p-1">
                     <p class="testo-y testo">Redatto il {{$article->created_at->format('d/m/Y')}} da <a href="{{route('article.byUser', $article->user)}}" class="testo-y testo active fw-bold">{{$article->user->name}}</a></p>
@@ -27,21 +36,20 @@
                 
                 
                 <div class="testo-y active p-1 my-3 bg-dark shadow" id="scroll-text">
-                <p class=" testo testo-y active">Corpo dell'articolo: <br>{{$article->body}}</p>
+                    <p class=" testo testo-y active">Corpo dell'articolo: <br>{{$article->body}}</p>
                 </div>
             </div>
-           
+            
             <div class="col-12 mt-4">
                 @if (Auth::user() && Auth::user()->is_revisor)
                 <div class="container ">
                     <div class="row">
-                        <div class="col-12 d-flex justify-content-evenly">
-                            <form action="{{ route('revisor.acceptArticle', $article) }}" method="POST">
+                        <div class="col-12 d-flex justify-content-evenly">   
+                            <form action="{{ route('revisor.rejectArticle', $article) }}" method="POST">
                                 @csrf
                                 <button type="submit" class="btn btn-danger">Rifiuta l'articolo</button>
                             </form>
-                            
-                            <form action="{{ route('revisor.rejectArticle', $article) }}" method="POST">
+                            <form action="{{ route('revisor.acceptArticle', $article) }}" method="POST">
                                 @csrf
                                 <button type="submit" class="btn btn-success">Accetta l'articolo</button>
                             </form>
@@ -55,5 +63,5 @@
             </div>
         </div>
     </div>
- <hr>
+    <hr>
 </x-layout>
