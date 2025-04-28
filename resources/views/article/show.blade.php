@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid mt-3  text-center ">
+    <div class="container-fluid mt-3 text-center">
         <div class="row justify-content-center">
             <div class="col-12">
                 <h1 class="display-1 titolo">{{$article->title}}</h1>
@@ -38,12 +38,12 @@
                         <div class="col-12 d-flex justify-content-evenly">
                             <form action="{{ route('revisor.acceptArticle', $article) }}" method="POST">
                                 @csrf
-                                <button type="submit" class="btn btn-success">Accetta l'articolo</button>
+                                <button type="submit" class="btn btn-danger">Rifiuta l'articolo</button>
                             </form>
                             
                             <form action="{{ route('revisor.rejectArticle', $article) }}" method="POST">
                                 @csrf
-                                <button type="submit" class="btn btn-danger">Rifiuta l'articolo</button>
+                                <button type="submit" class="btn btn-success">Accetta l'articolo</button>
                             </form>
                         </div>
                     </div>

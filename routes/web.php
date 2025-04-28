@@ -6,6 +6,8 @@ use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
 
+
+// rotte di tipo get
 Route::get('/', [PublicController::class, 'homepage' ])->name('homepage');
 Route::get('/article/create',[ArticleController::class, 'create'])->name('article.create');
 Route::post('/article/store',[ArticleController::class, 'store'])->name('article.store');
@@ -14,7 +16,15 @@ Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name(
 Route::get('/article/category/{category}', [ArticleController::class, 'byCategory'])->name('article.byCategory');
 Route::get('/article/user/{user}', [ArticleController::class, 'byUser'])->name('article.byUser');
 Route::get('/careers', [PublicController::class, 'careers'])->name('careers');
+Route::get('/article/search', [ArticleController::class, 'articleSearch'])->name('article.search');
+
+
+// rotte di tipo post
 Route::post('/careers/submit', [PublicController::class, 'careersSubmit'])->name('careers.submit'); 
+
+
+
+// rotte del middleware
 Route::middleware('admin')->group(function(){
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
     Route::patch('/admin/{user}/set-admin', [AdminController::class, 'setAdmin'])->name('admin.setAdmin');
@@ -31,6 +41,7 @@ Route::middleware('writer')->group(function(){
     Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
     Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
 });
+
 
 
 
