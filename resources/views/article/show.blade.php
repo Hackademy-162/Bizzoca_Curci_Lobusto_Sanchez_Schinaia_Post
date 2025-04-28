@@ -17,9 +17,7 @@
             <div class="col-12 col-md-6 ">
                 <div class="text-center bg-dark shadow">
                     <h2 class="testo testo-y ">{{$article->subtitle}}</h2>
-                    <p class="fs-5 testo testo-y">Categoria: 
-                        <a href="{{route('article.byCategory', $article->category)}}" class="text-capitalize fw-bold testo-y active">{{$article->category->name}}</a>
-                    </p>
+                    
                     @if ($article->category)
                     <p class="fs-5">Categoria:
                         <a href="{{ route('article.byCategory', $article->category) }}" class="text-capitalize fw-bold text-muted">
