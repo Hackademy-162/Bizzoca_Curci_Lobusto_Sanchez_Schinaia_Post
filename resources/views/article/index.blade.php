@@ -22,8 +22,8 @@
             @foreach ($articles as $article)
             <div class="col-12 col-md-4 mt-5 pb-4 d-flex justify-content-center">
                 <div class="card border-dark" style="width: 18rem;">
-                    <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="Immagine dell'articolo: {{$article->title}}">
-                    <div class="card-body">
+                    <img src="{{Storage::url($article->image)}}" class="card-img-top bordo" alt="Immagine dell'articolo: {{$article->title}}">
+                    <div class="card-body back-card">
                         <h5 class="card-title text-dark active">{{$article->title}}</h5>
                         <p class="card-text text-dark active">{{$article->subtitle}}</p>
                         @if ($article->category)
@@ -42,7 +42,7 @@
                             @endforeach
                         </p>
                     </div>
-                    <div class="card-footer d-flex justify-content-between align-items-center">
+                    <div class="card-footer d-flex justify-content-between align-items-center back-card">
                         <p>Redatto il {{ $article->created_at->format('d/m/Y') }} <br>
                             da <a href="{{route('article.byUser', $article->user)}}" class="text-capitalize text-dark active">{{$article->user->name}}</a></p>
                             <a href="{{route('article.show', $article)}}" class="btn btn-outline-dark">Leggi</a>

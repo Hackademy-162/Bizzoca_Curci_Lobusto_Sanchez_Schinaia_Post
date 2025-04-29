@@ -4,10 +4,10 @@
         {{ session('message') }}
     </div>
     @endif
-    <div class="container-fluid p-5  text-center bg-black">
+    <div class="container-fluid p-5  text-center ">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class="display-1">Bentornato, Redattore {{ Auth::user()->name }}</h1>
+                <h1 class="display-1 titolo">Bentornato, Redattore {{ Auth::user()->name }}</h1>
             </div>
         </div>
     </div>
