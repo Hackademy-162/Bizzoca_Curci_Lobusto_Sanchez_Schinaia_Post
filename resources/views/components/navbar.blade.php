@@ -25,7 +25,7 @@
          <button class="btn border-dark btn-dropdown btn-sm rounded"><a class="nav-link active dropdown-toggle titolo" >Vai alla dashboard</a></button>
           <ul class="drop-menu dropdown-menu" >
             @if (Auth::user()->is_admin)
-            <li><a class="dropdown-item text-dark pt-1 titolo text-center" href="{{ route('admin.dashboard') }}">Dashboard Admin</a></li>
+            <li><a class="dropdown-item text-dark pt-1 titolo bordo-bttm text-center" href="{{ route('admin.dashboard') }}">Dashboard Admin</a></li>
             @endif
             @if (Auth::user()->is_revisor)
             <li><a class="dropdown-item text-dark pt-2 titolo text-center" href="{{ route('revisor.dashboard') }}">Dashboard Revisor</a></li>

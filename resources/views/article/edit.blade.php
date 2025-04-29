@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-secondary-subtle text-center">
+    <div class="container-fluid p-5 titolo text-center">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
                 <h1 class="display-1">Modifica l'articolo</h1>
@@ -73,8 +73,8 @@
                     </div>
                     
                     <div class="mt-3 d-flex justify-content-center flex-column align-items-center">
-                        <button type="submit" class="btn btn-outline-secondary">Modifica articolo</button>
-                        <a href="{{ route('homepage') }}" class="text-secondary mt-2">Torna alla home</a>
+                        <button type="submit" class="btn btn-outline-dark">Modifica articolo</button>
+                        <a href="{{ route('homepage') }}" class="text-white active mt-2">Torna alla home</a>
                     </div>
                 </form>
             </div>
