@@ -66,8 +66,9 @@
                         </form>
                     </td>
                     @endif
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
-    </div>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
