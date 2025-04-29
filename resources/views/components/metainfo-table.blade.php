@@ -7,9 +7,9 @@
                 <th scope="col">Q.tà articoli collegati</th>
                 <th scope="col">Aggiorna</th>
                 <th scope="col">Cancella</th>
-                @if ($metaType != 'categorie')
+                {{-- @if ($metaType != 'categorie')
                 <th scope="col">Modifica</th>
-                @endif
+                @endif --}}
             </tr>
         </thead>
         <tbody>
@@ -20,13 +20,21 @@
                 <td>{{ count($metaInfo->articles) }}</td>
                 @if ($metaType == 'tags')
                 <td>
+                    <form action="{{ route('admin.editTag', ['tag' => $metaInfo]) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <input type="text" value="{{ $metaInfo->name }}" name="name" placeholder="Nuovo nome tag" class="form-control w-50 d-inline">
+                        <button type="submit" class="btn btn-success">Aggiorna</button>
+                    </form>
+                </td> 
+                {{-- <td>
                     <form action="">
                         @csrf
                         @method('PUT')
                         <input type="text" name="name" placeholder="Nuovo nome tag" class="form-control w-50 d-inline">
                         <button type="submit" class="btn btn-success">Aggiorna</button>
                     </form>
-                </td>
+                </td> --}}
                 <td>
                     <form action="{{ route('admin.deleteTag', ['tag' => $metaInfo]) }}" method="POST">
                         @csrf
@@ -34,14 +42,6 @@
                         <button type="submit" class="btn btn-danger">Elimina</button>
                     </form>
                 </td>
-                <td>
-                    <form action="{{ route('admin.editTag', ['tag' => $metaInfo]) }}" method="POST">
-                        @csrf
-                        @method('PUT')
-                        <input type="text" value="{{ $metaInfo->name }}" name="name" placeholder="Nuovo nome tag" class="form-control w-50 d-inline">
-                        <button type="submit" class="btn btn-warning">Modifica</button>
-                    </form>
-                </td> 
                 @else
                 <td>
                     <form action="{{ route('admin.editCategory', ['category' => $metaInfo]) }}" method="POST">
