@@ -18,7 +18,7 @@
                         <h5 class="card-title">{{ $article->title }}</h5>
                         <p class="card-subtitle">{{ $article->subtitle }}</p>
                         @if ($article->category)
-                        <p class="small text-muted">Categoria:
+                        <p class="small text-dark active">Categoria:
                             <a href="{{ route('article.byCategory', $article->category) }}" class="text-capitalize text-dark active">
                                 {{ $article->category->name }}
                             </a>
