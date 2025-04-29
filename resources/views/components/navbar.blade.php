@@ -30,6 +30,9 @@
         @if (Auth::user()->is_revisor)
         <li><a class="dropdown-item text-dark pt-2 titolo" href="{{ route('revisor.dashboard') }}">Dashboard Revisor</a></li>
         @endif
+        @if (Auth::user()->is_writer)
+        <li><a class="dropdown-item text-dark pt-2 titolo" href="{{ route('writer.dashboard') }}">Dashboard Writer</a></li>
+        @endif
         @endauth
         <form action="{{ route('article.search') }}" method="GET" class="d-flex" role="search">
        <input class="form-control me-2" type="search" name="query" placeholder="Cerca tra gli articoli..." aria-label="Search">
