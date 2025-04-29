@@ -1,27 +1,25 @@
 <x-layout>
     <div class="container-fluid mt-3 text-center">
         <div class="row justify-content-center">
-            <div class="col-12">
+            <div class="col-12 col-md-6">
                 <h1 class="display-1 titolo">{{$article->title}}</h1>
             </div>
         </div>
     </div>
-    <div class="container my-5 ">
+    <div class="container my-5">
         <div class="row justify-content-center ">
             <div class="col-12 col-md-6 d-flex flex-column">
                 <div class="d-flex justify-content-center">
-                    <img src="{{Storage::url($article->image)}}"  class="img-fluid bordo"
+                    <img src="{{Storage::url($article->image)}}"  class="img-fluid bordo mt-5"
                     alt="Immagine dell'articolo: {{$article->title}}">
                 </div>
             </div>
-            <div class="col-12 col-md-6 ">
-                
-                <div class="text-center bg-dark">
-                    
-                    <h2 class="testo testo-y">{{$article->subtitle}}</h2>
+            <div class="col-12 col-md-6 wrapper2 fs-3 mt-5 bordo">
+                <div class="text-center">
+                    <h2 class="testo fw-bold mt-3">{{$article->subtitle}}</h2>
                     @if ($article->category)
-                    <h3 class="fs-5 testo-y">Categoria:
-                        <a href="{{ route('article.byCategory', $article->category) }}" class="text-capitalize testo-y  active fw-bold">
+                    <h3 class="fs-5">Categoria:
+                        <a href="{{ route('article.byCategory', $article->category) }}" class="text-capitalize text-dark  active fw-bold">
                             {{ $article->category->name }}
                         </a>
                     </h3>
@@ -29,11 +27,12 @@
                     <p class="fs-5">Nessuna categoria</p>
                     @endif
                 </div>
-                <div class="active bg-dark p-1">
-                    <p class="testo testo-y fs-5">Redatto il {{$article->created_at->format('d/m/Y')}} da <a href="{{route('article.byUser', $article->user)}}" class="testo testo-y  active fw-bold">{{$article->user->name}}</a></p>
+                <div class="active  p-1">
+                    <p class="testo fs-5 text-center">Redatto il {{$article->created_at->format('d/m/Y')}} da <a href="{{route('article.byUser', $article->user)}}" class="testo  text-dark active fw-bold">{{$article->user->name}}</a></p>
                 </div> 
-                <div class="active p-1 bg-dark" id="scroll-text">
-                    <p class="testo testo-y  active fs-5">Corpo dell'articolo: <br>{{$article->body}}</p>
+                <div class="active p-1 " id="scroll-text">
+                 <p class="testo active text-center fs-2 fw-bold">Corpo dell'articolo: <br></p>
+                    <p class="testo active fs-5">{{$article->body}}</p>
                 </div>
             </div>
             <div class="col-12 mt-4">

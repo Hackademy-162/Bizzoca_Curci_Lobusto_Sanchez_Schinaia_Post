@@ -80,6 +80,34 @@
   
 }
 
+.drop-menu{
+position: absolute;
+top: 100%;
+background-color: #faf3e0;
+display: none;
+
+}
+
+.drop-custom:hover>.drop-menu{
+  display: block;
+}
+
+.drop-custom{
+  position: relative;
+}
+
+.bordo-bttm{
+  border-bottom: black solid 1px;
+}
+
+.btn-dropdown{
+  background-color: #faf3e0;
+}
+
+.wrapper2{
+  min-height: 100vh;
+  background: linear-gradient(0deg,rgba(13,202,240, 0.980) 0%, rgba(188, 156, 69, 0.980) , 50%); 
+}
 
 
 

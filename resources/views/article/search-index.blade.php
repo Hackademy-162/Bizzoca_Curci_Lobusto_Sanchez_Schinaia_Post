@@ -1,7 +1,7 @@
 <x-layout>
   <div class="container-fluid p-5 titolo text-center">
     <div class="row justify-content-center">
-      <div class="col-12">
+      <div class="col-12 col-md-6">
         <h1 class="display-1">Tutti gli articoli per {{ $query }}</h1>
       </div>
     </div>
