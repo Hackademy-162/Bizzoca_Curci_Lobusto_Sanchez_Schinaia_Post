@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="wrapper min-vh-100">
     <x-navbar/>
     {{$slot}}
     <x-footer/>

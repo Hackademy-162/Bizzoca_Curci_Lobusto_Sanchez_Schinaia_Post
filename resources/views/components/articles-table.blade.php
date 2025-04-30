@@ -1,6 +1,6 @@
 <div class="table-responsive">
-    <table class="table bg-tabella table-striped table-hover">
-        <thead class="table-dark">
+    <table class="table table-primary table-hover table-striped">
+        <thead>
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Titolo</th>

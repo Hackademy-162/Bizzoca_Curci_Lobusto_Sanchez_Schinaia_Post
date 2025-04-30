@@ -7,7 +7,7 @@
       </div>
     </div>
   
-    <div class="container my-5">
+    <div class="container vh-100 my-5">
       <div class="row">
         <div class="col-12 col-md-6">
           <form action="{{ route('careers.submit') }}" method="POST" class="card p-5 shadow">
@@ -25,7 +25,7 @@
                 @if (!Auth::user()->is_writer)
                     <option value="writer">Redattore</option>
                 @endif
-            </select>
+              </select>
               @error('role')
                 <span class="text-danger">{{ $message }}</span>
               @enderror
@@ -48,7 +48,7 @@
             </div>
   
             <div class="mt-3 d-flex justify-content-center">
-  <button type="submit" class="btn btn-outline-dark">Invia candidatura</button>
+              <button type="submit" class="btn btn-outline-dark">Invia candidatura</button>
             </div>
           </form>
         </div>
