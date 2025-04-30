@@ -1,4 +1,15 @@
 <x-layout>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                @if (session('message'))
+                <div class="alert alert-success text-center">
+                    {{ session('message') }}
+                </div>
+                @endif
+            </div>
+        </div>
+    </div>
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
@@ -6,21 +17,11 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-6">
-                @if (session('message'))
-                <div class="alert alert-success">
-                    {{ session('message') }}
-                </div>
-                @endif
-            </div>
-        </div>
-    </div>
+    
     <div class="container my-5">
         <div class="row justify-content-evenly">
             @foreach ($articles as $article)
-            <div class="col-12 col-md-4 mt-5 pb-4 d-flex justify-content-center">
+            <div class="col-12 col-md-4 mt-5 pb-4 d-flex justify-content-between">
                 <div class="card border-dark" style="width: 18rem;">
                     <img src="{{Storage::url($article->image)}}" class="card-img-top bordo" alt="Immagine dell'articolo: {{$article->title}}">
                     <div class="card-body back-card bordo ">

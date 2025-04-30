@@ -10,8 +10,8 @@
     <div class="container my-5">
         <div class="row justify-content-evenly">
             @foreach ($articles as $article)
-            <div class="col-12 col-md-3">
-                <div class="card" style="width: 25rem;">
+            <div class="col-12 col-md-3 justify-content-center">
+                <div class="card" style="width: 18rem;">
                     <img src="{{ Storage::url($article->image) }}" class="card-img-top bordo"
                     alt="Immagine dell'articolo {{ $article->title }}">
                     <div class="card-body back-card bordo">
