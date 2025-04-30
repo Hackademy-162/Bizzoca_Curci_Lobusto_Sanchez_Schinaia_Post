@@ -109,5 +109,13 @@ display: none;
   background: linear-gradient(0deg,rgba(13,202,240, 0.980) 0%, rgba(188, 156, 69, 0.980) , 50%); 
 }
 
+.tabella{
+  background-color: #faf3e0;
+}
+
+.bordo-top{
+  border-top: black solid 1px;
+}
+
 
 

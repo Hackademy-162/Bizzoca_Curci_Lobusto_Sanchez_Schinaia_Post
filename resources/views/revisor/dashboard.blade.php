@@ -1,9 +1,15 @@
 <x-layout>
-    @if (session('message'))
-    <div class="alert alert-success">
-        {{ session('message') }}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                @if (session('message'))
+                <div class="alert alert-success text-center">
+                    {{ session('message') }}
+                </div>
+                @endif
+            </div>
+        </div>
     </div>
-    @endif
     <div class="container-fluid p-5  text-center">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">

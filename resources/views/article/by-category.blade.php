@@ -10,8 +10,8 @@
     <div class="container my-5">
         <div class="row justify-content-evenly">
             @foreach ($articles as $article)
-            <div class="col-12 col-md-3">
-                <div class="card" style="width: 25rem;">
+            <div class="col-12 col-md-3 d-flex justify-content-evenly pb-3">
+                <div class="card" style="width: 18rem;">
                     <img src="{{ Storage::url($article->image) }}" class="card-img-top bordo"
                     alt="Immagine dell'articolo {{ $article->title }}">
                     <div class="card-body bordo back-card">
@@ -36,7 +36,7 @@
                     <div class="card-footer d-flex justify-content-between align-items-center bordo back-card">
                         <p>Redatto il {{ $article->created_at->format('d/m/Y') }} <br>
                             da {{ $article->user->name }}</p>
-                            <a href="{{ route('article.show', $article) }}" class="btn btn-dark">Leggi</a>
+                            <a href="{{ route('article.show', $article) }}" class="btn btn-outline-dark">Leggi</a>
                         </div>
                     </div>
                 </div>
