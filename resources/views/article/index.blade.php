@@ -17,13 +17,13 @@
             </div>
         </div>
     </div>
-    <div class="container my-5">
-            <div class="row justify-content-evenly">
-                @foreach ($articles as $article)
-                <div class="col-12 col-md-4 mt-5 pb-4 d-flex justify-content-center">
-                    <x-article-card :article="$article"/>
-                </div>
-                @endforeach
+    <div class="container my-5  contenitore">
+        <div class="row justify-content-evenly">
+            @foreach ($articles as $article)
+            <div class="col-12 col-md-4 mt-5 pb-4 d-flex justify-content-center">
+                <x-article-card :article="$article"/>
             </div>
+            @endforeach
         </div>
-    </x-layout>
+    </div>
+</x-layout>

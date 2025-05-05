@@ -17,7 +17,7 @@
                         <label for="title" class="form-label">Titolo</label>
                         <input type="text" name="title" class="form-control" id="title" value="{{ $article->title }}">
                         @error('title')
-                        <span class="text-danger">{{ $message }}</span>
+                        <span class="text-danger text-center">{{ $message }}</span>
                         @enderror
                     </div>
                     
@@ -25,7 +25,7 @@
                         <label for="subtitle" class="form-label">Sottotitolo</label>
                         <input type="text" name="subtitle" class="form-control" id="subtitle" value="{{ $article->subtitle }}">
                         @error('subtitle')
-                        <span class="text-danger">{{ $message }}</span>
+                        <span class="text-danger text-center">{{ $message }}</span>
                         @enderror
                     </div>
                     
@@ -56,6 +56,13 @@
                     </div>
                     
                     <div class="mb-3">
+                        <label for="body" class="form-label">Corpo del testo</label>
+                        <textarea name="body" class="form-control" id="body" cols="30" rows="7">{{ $article->body }}</textarea>
+                        @error('body')
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
                         <label for="tags" class="form-label">Tags</label>
                         <input type="text" name="tags" class="form-control" id="tags" value="{{ $article->tags->implode('name', ', ') }}">
                         <span class="small text-muted fst-italic">Dividi ogni tag con una virgola</span>
@@ -64,13 +71,6 @@
                         @enderror
                     </div>
                     
-                    <div class="mb-3">
-                        <label for="body" class="form-label">Corpo del testo</label>
-                        <textarea name="body" class="form-control" id="body" cols="30" rows="7">{{ $article->body }}</textarea>
-                        @error('body')
-                        <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                    </div>
                     
                     <div class="mt-3 d-flex justify-content-center flex-column align-items-center">
                         <button type="submit" class="btn btn-outline-dark">Modifica articolo</button>

@@ -105,13 +105,12 @@ display: none;
   background: linear-gradient(0deg,rgba(13,202,240, 0.980) 0%, rgba(188, 156, 69, 0.980) , 50%); 
 }
 
-.bg-tabella{
-  background-color: #fa0b03 !important;
-
-}
-
 .bordo-top{
   border-top: black solid 1px;
+}
+
+.contenitore{
+  min-height: 100vh;
 }
 
 

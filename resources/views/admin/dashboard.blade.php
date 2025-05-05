@@ -19,32 +19,32 @@
     </div>   
     <div class="container my-5">
         <div class="d-flex justify-content-between">           
-            <h2>Richieste per il ruolo di amministratore</h2>           
+            <h2 class="shadow  testo bold">Richieste per il ruolo di amministratore</h2>           
         </div>
         <x-request-table :roleRequests="$adminRequests" role="amministratore" />
     </div>
     <div class="container my-5">
         <div class="d-flex justify-content-between">        
-            <h2>Richieste per il ruolo di revisore</h2>
+            <h2 class="shadow  testo bold">Richieste per il ruolo di revisore</h2>
         </div>
         <x-request-table :roleRequests="$revisorRequests" role="revisore" />
     </div>
     <div class="container my-5">
         <div class="d-flex justify-content-between">
-            <h2>Richieste per il ruolo di redattore</h2>
+            <h2 class="shadow  testo bold">Richieste per il ruolo di redattore</h2>
         </div>
         <x-request-table :roleRequests="$writerRequests" role="redattore" />
     </div>
     <hr>
     <div class="container my-5">
         <div class=" d-flex justify-content-between">          
-            <h2>Tutti i tags</h2>
+            <h2 class="shadow  testo bold">Tutti i tags</h2>
         </div>
         <x-metainfo-table :metaInfos="$tags" metaType="tags" />
     </div>
     <div class="container my-5">
         <div class="d-flex justify-content-between">
-            <h2>Tutte le categorie</h2>
+            <h2 class="shadow  testo bold">Tutte le categorie</h2>
         </div>
         <form action="{{ route('admin.storeCategory') }}" method="POST" class="w-50 d-flex m-3">
             @csrf

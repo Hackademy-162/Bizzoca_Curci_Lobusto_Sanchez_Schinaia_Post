@@ -28,11 +28,11 @@
                     @endif
                 </div>
                 <div class="active  p-1">
-                    <p class="testo fs-5 text-center">Redatto il {{$article->created_at->format('d/m/Y')}} da <a href="{{route('article.byUser', $article->user)}}" class="testo  text-dark active fw-bold">{{$article->user->name}}</a></p>
+                    <p class="fs-5 text-center">Redatto il {{$article->created_at->format('d/m/Y')}} da <a href="{{route('article.byUser', $article->user)}}" class="text-dark active fw-bold">{{$article->user->name}}</a></p>
                 </div> 
                 <div class="active p-1 " id="scroll-text">
                  <p class="testo active text-center fs-2 fw-bold">Corpo dell'articolo: <br></p>
-                    <p class="testo active fs-5">{{$article->body}}</p>
+                    <p class="active fs-5">{{$article->body}}</p>
                 </div>
             </div>
             <div class="col-12 mt-4">

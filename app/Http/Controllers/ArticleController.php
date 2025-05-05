@@ -123,14 +123,16 @@ public function update(Request $request, Article $article)
         'body' => $request->body,
         'category_id' => $request->category,
         'slug'       => Str::slug($request->title),
+        'is_accepted' => NULL
     ]);
-    
+
     if($request->image){
-        Storage::delete($article->image);
+        Storage::disk('public')->delete($article->image);
         $article->update([
             'image' => $request->file('image')->store('images', 'public')
         ]);
     }
+    
     
     $tags = explode(',', $request->tags);
     
@@ -157,6 +159,10 @@ public function destroy(Article $article)
 {
     foreach ($article->tags as $tag) {
         $article->tags()->detach($tag);
+    }
+
+    if ($article->image) {
+        Storage::disk('public')->delete($article->image);
     }
     
     $article->delete();

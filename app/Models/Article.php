@@ -45,7 +45,7 @@ class Article extends Model
 
     public function readDuration(){
         $totalWords = Str::wordCount($this->body);
-        $minutesToRead = round($totalWord / 200);
+        $minutesToRead = round($totalWords / 200);
         return intval($minutesToRead);
     }
 }
