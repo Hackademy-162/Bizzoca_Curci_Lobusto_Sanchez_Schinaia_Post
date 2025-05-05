@@ -21,17 +21,35 @@ class AdminController extends Controller
         $user->save();
         return redirect(route('admin.dashboard'))->with('message', "Hai reso $user->name amministratore");
     }
+
+    public function unsetAdmin(User $user){
+        $user->is_admin = false;
+        $user->save();
+        return redirect(route('admin.dashboard'))->with('message', "Hai rifiutato la richiesta di $user->name da amministratore");
+    }
     
     public function setRevisor(User $user){
         $user->is_revisor = true;
         $user->save();
         return redirect(route('admin.dashboard'))->with('message', "Hai reso $user->name revisore");
     }
+
+    public function unsetRevisor(User $user){
+        $user->is_revisor = false;
+        $user->save();
+        return redirect(route('admin.dashboard'))->with('message', "Hai rifiutato la richiesta di $user->name da revisore");
+    }
     
     public function setWriter(User $user){
         $user->is_writer = true;
         $user->save();
         return redirect(route('admin.dashboard'))->with('message', "Hai reso $user->name redattore");
+    }
+
+    public function unsetWriter(User $user){
+        $user->is_writer = false;
+        $user->save();
+        return redirect(route('admin.dashboard'))->with('message', "Hai rifiutato la richiesta di $user->name da redattore");
     }
 
     public function editTag(Request $request, Tag $tag){

@@ -22,6 +22,11 @@
                         @method('PATCH')
                         <button type="submit" class="btn btn-dark">Attiva {{ $role }}</button>
                     </form>
+                    <form action="{{ route('admin.unsetAdmin', $user) }}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button type="submit" class="btn btn-danger">Rifiuta {{ $role }}</button>
+                    </form>
                     @break
                     
                     @case('revisore')
@@ -30,6 +35,11 @@
                         @method('PATCH')
                         <button type="submit" class="btn btn-dark">Attiva {{ $role }}</button>
                     </form>
+                    <form action="{{ route('admin.unsetRevisor', $user) }}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button type="submit" class="btn btn-danger">Rifiuta {{ $role }}</button>
+                    </form>
                     @break
                     
                     @case('redattore')
@@ -37,6 +47,11 @@
                         @csrf
                         @method('PATCH')
                         <button type="submit" class="btn btn-dark">Attiva {{ $role }}</button>
+                    </form>
+                    <form action="{{ route('admin.unsetWriter', $user) }}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button type="submit" class="btn btn-danger">Rifiuta {{ $role }}</button>
                     </form>
                     @break
                     @endswitch
