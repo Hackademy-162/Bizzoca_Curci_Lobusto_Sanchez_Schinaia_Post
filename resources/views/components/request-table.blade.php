@@ -25,7 +25,7 @@
                     <form action="{{ route('admin.unsetAdmin', $user) }}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-danger">Rifiuta {{ $role }}</button>
+                        <button type="submit" class="btn btn-danger mt-2">Rifiuta {{ $role }}</button>
                     </form>
                     @break
                     
@@ -38,7 +38,7 @@
                     <form action="{{ route('admin.unsetRevisor', $user) }}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-danger">Rifiuta {{ $role }}</button>
+                        <button type="submit" class="btn btn-danger mt-2">Rifiuta {{ $role }}</button>
                     </form>
                     @break
                     
@@ -51,7 +51,7 @@
                     <form action="{{ route('admin.unsetWriter', $user) }}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-danger">Rifiuta {{ $role }}</button>
+                        <button type="submit" class="btn btn-danger mt-2">Rifiuta {{ $role }}</button>
                     </form>
                     @break
                     @endswitch

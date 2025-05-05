@@ -1,26 +1,11 @@
 Palette colori: 
--Nome sito:colore.1 Rosso colore.2 Nero
--Titolo: colore.Nero
--Testo: colore.Nero
+-Background: gradient da rgba(13,202,240, 0.980) a rgba(188,156,69, 0.980)
+-Dettagli navbar: #faf3e0
+-Titolo: #000000
 
-Fonts: 
--Nome sito:.playfair-display-<uniquifier> {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
 -Titolo:.oswald-<uniquifier> {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
-}
--Testo:.roboto-<uniquifier> {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
 }
